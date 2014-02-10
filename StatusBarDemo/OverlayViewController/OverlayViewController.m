@@ -29,14 +29,15 @@
   self.view.layer.cornerRadius = 8;
 }
 
+- (void)show
+{
+  [self setHidden:NO duration:0.6 options:UIViewAnimationOptionCurveEaseInOut];
+}
+
 - (IBAction)didTap:(UITapGestureRecognizer *)tapGesture
 {
-  BOOL shouldOpen = self.view.frame.origin.y > 0;
-  [UIView animateWithDuration:0.6 animations:^{
-    CGRect frame = self.view.bounds;
-    frame.origin.y = shouldOpen ? 0 : CGRectGetHeight(self.view.bounds) - 80;
-    self.view.frame = frame;
-  }];
+  BOOL shouldOpen = self.window.frame.origin.y > 0;
+  [self setHidden:!shouldOpen duration:0.6 options:UIViewAnimationOptionCurveEaseInOut];
 }
 
 - (IBAction)didPan:(UIPanGestureRecognizer *)panGesture
@@ -46,31 +47,39 @@
   BOOL shouldOpen = velocity.y < 0;
   switch (panGesture.state) {
     case UIGestureRecognizerStateBegan:
-      self.containerOffsetYWhenPanBegan = self.view.frame.origin.y;
+      self.containerOffsetYWhenPanBegan = self.window.frame.origin.y;
       break;
     case UIGestureRecognizerStateChanged: {
-      self.view.hidden = NO;
-      CGRect frame = self.view.bounds;
+      CGRect frame = self.window.bounds;
       frame.origin.y = MAX(0, self.containerOffsetYWhenPanBegan + translation.y);
-      self.view.frame = frame;
+      self.window.frame = frame;
     } break;
     case UIGestureRecognizerStateEnded:
     case UIGestureRecognizerStateCancelled:
     case UIGestureRecognizerStateFailed: {
       CGFloat targetOffsetY = shouldOpen ? 0 : CGRectGetHeight(self.view.bounds) - 80;
-      CGFloat distance = fabsf(CGRectGetMinY(self.view.frame) - targetOffsetY);
+      CGFloat distance = fabsf(CGRectGetMinY(self.window.frame) - targetOffsetY);
       CGFloat speed = fabsf(velocity.y);
-      NSTimeInterval defaultDuration = distance / 813;
-      NSTimeInterval duration = MAX(defaultDuration, (distance / speed));
-      [UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        CGRect frame = self.view.bounds;
-        frame.origin.y = targetOffsetY;
-        self.view.frame = frame;
-      } completion:NULL];
+      NSTimeInterval duration = distance/speed;
+      [self setHidden:!shouldOpen duration:duration options:UIViewAnimationOptionCurveEaseOut];
     } break;
     default:
       break;
   }
+}
+
+- (void)setHidden:(BOOL)hidden duration:(NSTimeInterval)duration options:(UIViewAnimationOptions)options
+{
+  [UIView animateWithDuration:0.6 delay:0 options:options animations:^{
+    CGRect frame = self.window.bounds;
+    frame.origin.y = !hidden ? 0 : CGRectGetHeight(self.view.bounds) - 80;
+    self.window.frame = frame;
+  } completion:NULL];
+}
+
+- (UIWindow *)window
+{
+  return self.view.window;
 }
 
 @end

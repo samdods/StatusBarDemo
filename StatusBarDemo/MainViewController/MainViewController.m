@@ -21,8 +21,11 @@
   [super viewDidLoad];
   self.topWindow = [[UIWindow alloc] initWithFrame:self.view.bounds];
   [self.topWindow setRootViewController:self.overlayViewController];
+  CGRect frame = self.view.bounds;
+  frame.origin.y = CGRectGetHeight(self.view.bounds) - 80;
+  self.topWindow.frame = frame;
   self.topWindow.windowLevel = UIWindowLevelStatusBar;
-  [self.topWindow makeKeyAndVisible];
+  [self.topWindow setHidden:NO];
 }
 
 - (OverlayViewController *)overlayViewController
@@ -30,6 +33,11 @@
   return _overlayViewController ?: ({
     _overlayViewController = [OverlayViewController new];
   });
+}
+
+- (IBAction)didTapShowOptions:(id)sender
+{
+  [self.overlayViewController show];
 }
 
 @end

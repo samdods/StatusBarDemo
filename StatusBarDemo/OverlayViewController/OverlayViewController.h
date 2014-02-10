@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface OverlayViewController : UIViewController
-
+- (void)show;
 @end

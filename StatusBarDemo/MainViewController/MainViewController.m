@@ -11,6 +11,7 @@
 
 @interface MainViewController ()
 @property (strong, nonatomic) OverlayViewController *overlayViewController;
+@property (strong, nonatomic) UIWindow *topWindow;
 @end
 
 @implementation MainViewController
@@ -18,11 +19,10 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  UIWindow *statusBarWindow = [[UIApplication sharedApplication] valueForKey:@"statusBarWindow"];
-  CGRect frame = self.view.bounds;
-  frame.origin.y = CGRectGetHeight(self.view.bounds) - 80;
-  self.overlayViewController.view.frame = frame;
-  [statusBarWindow addSubview:self.overlayViewController.view];
+  self.topWindow = [[UIWindow alloc] initWithFrame:self.view.bounds];
+  [self.topWindow setRootViewController:self.overlayViewController];
+  self.topWindow.windowLevel = UIWindowLevelStatusBar;
+  [self.topWindow makeKeyAndVisible];
 }
 
 - (OverlayViewController *)overlayViewController

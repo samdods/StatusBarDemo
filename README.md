@@ -3,7 +3,7 @@ StatusBarDemo
 
 # The Effect
 
-<img src="//i.imgflip.com/6skj5.gif" title="made at imgflip.com"/>
+<img src="i.imgflip.com/6skj5.gif" title="made at imgflip.com"/>
 
 # The Secret
 

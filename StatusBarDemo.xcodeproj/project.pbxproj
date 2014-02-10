@@ -14,13 +14,15 @@
 		EA0484C218A8B3BA009D6CA2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0484C118A8B3BA009D6CA2 /* main.m */; };
 		EA0484C618A8B3BA009D6CA2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0484C518A8B3BA009D6CA2 /* AppDelegate.m */; };
 		EA0484C918A8B3BA009D6CA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0484C718A8B3BA009D6CA2 /* Main.storyboard */; };
-		EA0484CC18A8B3BA009D6CA2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0484CB18A8B3BA009D6CA2 /* ViewController.m */; };
+		EA0484CC18A8B3BA009D6CA2 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0484CB18A8B3BA009D6CA2 /* MainViewController.m */; };
 		EA0484CE18A8B3BA009D6CA2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA0484CD18A8B3BA009D6CA2 /* Images.xcassets */; };
 		EA0484D518A8B3BA009D6CA2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0484D418A8B3BA009D6CA2 /* XCTest.framework */; };
 		EA0484D618A8B3BA009D6CA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0484B518A8B3BA009D6CA2 /* Foundation.framework */; };
 		EA0484D718A8B3BA009D6CA2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0484B918A8B3BA009D6CA2 /* UIKit.framework */; };
 		EA0484DF18A8B3BA009D6CA2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA0484DD18A8B3BA009D6CA2 /* InfoPlist.strings */; };
 		EA0484E118A8B3BA009D6CA2 /* StatusBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0484E018A8B3BA009D6CA2 /* StatusBarDemoTests.m */; };
+		EA0484EF18A8B454009D6CA2 /* OverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0484ED18A8B454009D6CA2 /* OverlayViewController.m */; };
+		EA0484F018A8B454009D6CA2 /* OverlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA0484EE18A8B454009D6CA2 /* OverlayViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +47,17 @@
 		EA0484C418A8B3BA009D6CA2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA0484C518A8B3BA009D6CA2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		EA0484C818A8B3BA009D6CA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA0484CA18A8B3BA009D6CA2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EA0484CB18A8B3BA009D6CA2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA0484CA18A8B3BA009D6CA2 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EA0484CB18A8B3BA009D6CA2 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EA0484CD18A8B3BA009D6CA2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EA0484D318A8B3BA009D6CA2 /* StatusBarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StatusBarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0484D418A8B3BA009D6CA2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		EA0484DC18A8B3BA009D6CA2 /* StatusBarDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StatusBarDemoTests-Info.plist"; sourceTree = "<group>"; };
 		EA0484DE18A8B3BA009D6CA2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA0484E018A8B3BA009D6CA2 /* StatusBarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StatusBarDemoTests.m; sourceTree = "<group>"; };
+		EA0484EC18A8B454009D6CA2 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
+		EA0484ED18A8B454009D6CA2 /* OverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayViewController.m; sourceTree = "<group>"; };
+		EA0484EE18A8B454009D6CA2 /* OverlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +117,10 @@
 		EA0484BB18A8B3BA009D6CA2 /* StatusBarDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EA0484EB18A8B428009D6CA2 /* OverlayViewController */,
+				EA0484EA18A8B3EE009D6CA2 /* MainViewController */,
 				EA0484C418A8B3BA009D6CA2 /* AppDelegate.h */,
 				EA0484C518A8B3BA009D6CA2 /* AppDelegate.m */,
-				EA0484C718A8B3BA009D6CA2 /* Main.storyboard */,
-				EA0484CA18A8B3BA009D6CA2 /* ViewController.h */,
-				EA0484CB18A8B3BA009D6CA2 /* ViewController.m */,
 				EA0484CD18A8B3BA009D6CA2 /* Images.xcassets */,
 				EA0484BC18A8B3BA009D6CA2 /* Supporting Files */,
 			);
@@ -150,6 +154,26 @@
 				EA0484DD18A8B3BA009D6CA2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA0484EA18A8B3EE009D6CA2 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA0484CA18A8B3BA009D6CA2 /* MainViewController.h */,
+				EA0484CB18A8B3BA009D6CA2 /* MainViewController.m */,
+				EA0484C718A8B3BA009D6CA2 /* Main.storyboard */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		EA0484EB18A8B428009D6CA2 /* OverlayViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA0484EC18A8B454009D6CA2 /* OverlayViewController.h */,
+				EA0484ED18A8B454009D6CA2 /* OverlayViewController.m */,
+				EA0484EE18A8B454009D6CA2 /* OverlayViewController.xib */,
+			);
+			path = OverlayViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +255,7 @@
 				EA0484CE18A8B3BA009D6CA2 /* Images.xcassets in Resources */,
 				EA0484C018A8B3BA009D6CA2 /* InfoPlist.strings in Resources */,
 				EA0484C918A8B3BA009D6CA2 /* Main.storyboard in Resources */,
+				EA0484F018A8B454009D6CA2 /* OverlayViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA0484CC18A8B3BA009D6CA2 /* ViewController.m in Sources */,
+				EA0484CC18A8B3BA009D6CA2 /* MainViewController.m in Sources */,
 				EA0484C618A8B3BA009D6CA2 /* AppDelegate.m in Sources */,
 				EA0484C218A8B3BA009D6CA2 /* main.m in Sources */,
+				EA0484EF18A8B454009D6CA2 /* OverlayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +314,7 @@
 				EA0484C818A8B3BA009D6CA2 /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EA0484DD18A8B3BA009D6CA2 /* InfoPlist.strings */ = {

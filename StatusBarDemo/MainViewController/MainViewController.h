@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MainViewController.h
 //  StatusBarDemo
 //
 //  Created by Sam Dods on 10/02/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface MainViewController : UIViewController
 
 @end
